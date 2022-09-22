@@ -1,0 +1,26 @@
+.nav .nav__logo {
+    margin-left: -45px;
+}
+
+.nav {
+    background: rgba(0, 0, 0, 0.1)!important;
+}
+
+.nav__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr!important;
+    gap: 10px;
+}
+.nav__switchmode {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    text-align: center;
+}
+
+.nav .gamestart__housebtn {
+    margin: 0px!important;
+}
+
+.gamestart__housebtn:last-of-type {
+    grid-column: 3/4!important;
+}
