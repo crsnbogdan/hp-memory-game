@@ -6,6 +6,9 @@ import GameStart from './Components/GameStart/GameStart';
 const Game = () => {
   const [gameMode, setGameMode] = useState('');
   const [gameOver, setGameOver] = useState(false);
+  const [gameScore, setGameScore] = useState(0);
+  const [gameHighestScore, setGameHighestScore] = useState(0);
+
   const [gameStartWindowIsMounted, setGameStartWindowIsMounted] =
     useState(true);
   const [gameOngoingIsMounted, setGameOngoingIsMounted] = useState(false);
@@ -21,13 +24,17 @@ const Game = () => {
       />
       {!gameOver && gameOngoingIsMounted ? (
         <GameOngoing
-          gameOver={gameOver}
-          setGameOver={setGameOver}
+          gameStartWindowIsMounted={gameStartWindowIsMounted}
+          gameOngoingIsMounted={gameOngoingIsMounted}
+          setGameOngoingIsMounted={setGameOngoingIsMounted}
           gameMode={gameMode}
           setGameMode={setGameMode}
-          gameOngoingIsMounted={gameOngoingIsMounted}
-          gameStartWindowIsMounted={gameStartWindowIsMounted}
-          setGameOngoingIsMounted={setGameOngoingIsMounted}
+          gameScore={gameScore}
+          setGameScore={setGameScore}
+          gameHighestScore={gameHighestScore}
+          setGameHighestScore={setGameHighestScore}
+          gameOver={gameOver}
+          setGameOver={setGameOver}
         />
       ) : (
         <GameOver />

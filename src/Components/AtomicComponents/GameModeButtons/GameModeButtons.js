@@ -42,6 +42,7 @@ const GameModeButtons = (props) => {
             }
             className="gamestart__housebtn"
             onClick={() => {
+              props.resetCardsArr();
               props.setGameMode(btn.gameModeOption);
               props.updateGameColorandCardsArr();
               props.setCardsAreMounted(false);

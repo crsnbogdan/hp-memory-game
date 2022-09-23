@@ -38,6 +38,7 @@ const GameNav = (props) => {
               setGameMode={props.setGameMode}
               setCardsAreMounted={props.setCardsAreMounted}
               updateGameColorandCardsArr={props.updateGameColorandCardsArr}
+              resetCardsArr={props.resetCardsArr}
             />
           }
         </div>
@@ -45,8 +46,10 @@ const GameNav = (props) => {
           <Typography variant="p" color="primary" sx={{ fontSize: '18px' }}>
             Score:
           </Typography>
-          <p className="text-white text-sm">Highest score:</p>
-          <p className="text-white text-sm">Current score:</p>
+          <p className="text-white text-sm">
+            Highest score: {props.gameHighestScore}
+          </p>
+          <p className="text-white text-sm">Current score: {props.gameScore}</p>
         </div>
       </ThemeProvider>
     </nav>
