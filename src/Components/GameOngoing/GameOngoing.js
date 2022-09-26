@@ -97,7 +97,6 @@ const GameOngoing = (props) => {
             zIndex: '1',
           }}
           onClick={() => {
-            // if (props.gameOver) return;
             updateOnCardClicked(card);
           }}
         />
@@ -107,9 +106,10 @@ const GameOngoing = (props) => {
   };
 
   const updateOnCardClicked = (card) => {
-    console.log(props.gameOver);
+    if (props.gameOver) return;
     if (card.wasClicked) {
       props.setGameOver(true);
+      return;
     }
     card.wasClicked = true;
     shuffleGameCards();
@@ -153,6 +153,24 @@ const GameOngoing = (props) => {
     },
     [cardsAreMounted]
   );
+  useEffect(
+    function setGameOver() {
+      // if (!props.gameOver) return;
+      return () => {
+        props.setGameOngoingIsMounted(false);
+        props.setGameOverIsMounted(true);
+      };
+    },
+    [props.gameOver]
+  );
+
+  useEffect(() => {
+    return () => {
+      if (props.gameScore > props.gameHighestScore) {
+        props.setGameHighestScore(props.gameScore);
+      }
+    };
+  }, [props.gameOver]);
 
   return (
     <div className="gamecontainer">
@@ -178,12 +196,6 @@ const GameOngoing = (props) => {
           />
         ) : null}
       </div>
-      <button
-        className="text-white"
-        onClick={() => console.log(props.gameScore)}
-      >
-        test
-      </button>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from './Components/Footer/Footer';
 import GameOngoing from './Components/GameOngoing/GameOngoing';
 import GameOver from './Components/GameOver/GameOver';
 import GameStart from './Components/GameStart/GameStart';
@@ -12,6 +13,7 @@ const Game = () => {
   const [gameStartWindowIsMounted, setGameStartWindowIsMounted] =
     useState(true);
   const [gameOngoingIsMounted, setGameOngoingIsMounted] = useState(false);
+  const [gameOverIsMounted, setGameOverIsMounted] = useState(false);
 
   return (
     <div className="bg-gradient-to-t from-slate-900 to-slate-800">
@@ -22,7 +24,7 @@ const Game = () => {
         setGameStartWindowIsMounted={setGameStartWindowIsMounted}
         setGameOngoingIsMounted={setGameOngoingIsMounted}
       />
-      {!gameOver && gameOngoingIsMounted ? (
+      {gameOngoingIsMounted && !gameOver && (
         <GameOngoing
           gameStartWindowIsMounted={gameStartWindowIsMounted}
           gameOngoingIsMounted={gameOngoingIsMounted}
@@ -35,10 +37,22 @@ const Game = () => {
           setGameHighestScore={setGameHighestScore}
           gameOver={gameOver}
           setGameOver={setGameOver}
+          setGameOverIsMounted={setGameOverIsMounted}
         />
-      ) : (
-        <GameOver />
       )}
+      {gameOver && gameOverIsMounted && (
+        <GameOver
+          setGameOngoingIsMounted={setGameOngoingIsMounted}
+          setGameStartWindowIsMounted={setGameStartWindowIsMounted}
+          setGameScore={setGameScore}
+          setGameMode={setGameMode}
+          setGameOver={setGameOver}
+          gameScore={gameScore}
+          gameHighestScore={gameHighestScore}
+          setGameHighestScore={setGameHighestScore}
+        />
+      )}
+      <Footer />
     </div>
   );
 };

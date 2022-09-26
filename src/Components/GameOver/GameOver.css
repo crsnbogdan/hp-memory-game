@@ -1,0 +1,9 @@
+.gameover {
+    height: 90vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.gameover__logocontainer {
+    scale: 1.4;
+}

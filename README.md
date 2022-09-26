@@ -1,16 +1,52 @@
-TITLE: Harry Potter Memory Game
 
-VERSION NUMBER: 1.0
+# Harry Potter's Memory Card Game
 
-DESCRIPTION: A game that tests your memory using Harry Potter characters. You can either choose cards with characters from all of the houses, or an individual house. Each option (all characters, or a specific house) will have its own theme implemented using Material UI. The purpose is to try to click on as many cards as possible without clicking on the same one twice, as this will result in a game over.
+This game tests your memory skills using Harry Potter characters. You can either choose cards with characters from all of the houses, or an individual house. Each option will has its own theme implemented using Material UI. Clicking on the same card twice will result in a game over.
 
- The use of React Hooks is fundamental for this project.
+## Technologies Used
+- React and React Hooks
+- Tailwind CSS
+- Material UI
+## Lessons Learned
 
-PROJECT STATUS: In Progress
+1. React
 
-TO DO:
-- write plan
+    - use the useState hook to initialize and set state, and pass the state down to children through props
+    - use the useEffect hook to implement lifecycle methods for when a component is mounted, re-rendered and unmounted
+     
 
-TECHNOLOGIES USED: HTML & CSS, JS, React, NPM & Webpack, TailwindCSS, Material UI
+2. Material UI
 
-WHAT I'VE LEARNED:
+    - create custom themes using MUI's createTheme function
+    - use the custom themes to dynamically style elements on a page
+    - add inline style and stylize elements using MUI's props
+
+## Run Locally
+
+Clone the project
+```bash
+  git clone https://github.com/crsnbogdan/hp-memory-game
+```
+
+Go to the project directory
+```bash
+  cd hp-memory-game
+```
+
+Install dependencies
+```bash
+  npm install
+```
+
+Start the server
+```bash
+  npm start
+```
+
+
+## Project Info
+Status: Complete
+
+Version. 1.0
+
+Author: [@crsnbogdan](https://www.github.com/crsnbogdan)
