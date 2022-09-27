@@ -90,10 +90,8 @@ const GameOngoing = (props) => {
           key={uniqid()}
           style={{
             backgroundImage: `url(${card.img})`,
-            backgroundSize: 'auto 110%',
             backgroundPosition: 'center',
             width: '174px',
-            height: '250px',
             zIndex: '1',
           }}
           onClick={() => {
@@ -183,7 +181,7 @@ const GameOngoing = (props) => {
         gameHighestScore={props.gameHighestScore}
         resetCardsArr={resetCardsArr}
       />
-      <div className="m-10">
+      <div className="m-10 cards">
         {cardsAreMounted ? (
           <Cards
             gameCards={gameCards}

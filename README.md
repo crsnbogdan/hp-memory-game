@@ -47,6 +47,6 @@ Start the server
 ## Project Info
 Status: Complete
 
-Version. 1.0
+Version. 1.1
 
 Author: [@crsnbogdan](https://www.github.com/crsnbogdan)

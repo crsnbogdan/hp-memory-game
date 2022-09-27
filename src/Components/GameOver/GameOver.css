@@ -7,3 +7,13 @@
 .gameover__logocontainer {
     scale: 1.4;
 }
+
+@media screen and (max-width: 480px) {
+    .gameover__logocontainer {
+        transform: scale(0.5)!important;
+    }
+    
+    .gameover__restartbtn {
+        font-size: 16px!important;
+    }
+}

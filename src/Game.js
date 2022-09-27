@@ -16,7 +16,7 @@ const Game = () => {
   const [gameOverIsMounted, setGameOverIsMounted] = useState(false);
 
   return (
-    <div className="bg-gradient-to-t from-slate-900 to-slate-800">
+    <div className="game bg-gradient-to-t from-slate-900 to-slate-800">
       <GameStart
         gameMode={gameMode}
         setGameMode={setGameMode}

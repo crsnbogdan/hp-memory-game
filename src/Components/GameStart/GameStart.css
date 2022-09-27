@@ -11,11 +11,18 @@
 }
 
 @media screen and (max-width: 768px) {
-    .gamestart__logocontainer h1 {
-        font-size: 16px;
+    .gamestart__logocontainer {
+        transform: scale(0.5);
+        margin-bottom: 0!important;
+        margin-left: -15px;
     }
-    .gamestart__logocontainer img {
-        margin-left: -20px!important;
+    .gamestart__logocontainer h1 {
+        font-size: 18px;
+    }
+    .gamestart h2 {
+        margin-top:0;
+        margin-bottom: 12px!important;
+        font-size: 16px;
     }
     .gamestart__logocontainer span {
         font-size: 20px;
@@ -23,8 +30,18 @@
     .gamestart__modescontainer {
         display: flex;
         flex-direction: column;
+        margin-bottom: 12px!important;
     }
     .gamestart__modescontainer button {
         margin: 16px 0!important;
+        font-size: 12px;
+        margin:  6px 0!important;
+    }
+    .gamestart__startbtn {
+        font-size: 14px!important;
+        margin-top:0!important;
+    }
+    .footer span {
+        font-size: 12px;
     }
 }

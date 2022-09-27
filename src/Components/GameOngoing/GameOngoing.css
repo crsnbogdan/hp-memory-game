@@ -1,3 +1,72 @@
 .gamecontainer {
     min-height: 100vh;
 }
+.game {
+    min-height: 100vh;
+}
+
+.card__container >  button {
+    background-size: auto 110%;
+    width: 174px;
+    height: 250px;
+}
+
+@media screen and (max-width: 1024px) {
+    .cards__container {
+        width: 700px;
+    }
+
+    .card__container {
+        width: 140px;
+        height: 200px
+    }
+}
+@media screen and (max-width: 768px) {
+    .gamecontainer {
+        min-height: auto;
+    }
+
+    .cards {
+        margin: 1rem!important;
+    }
+
+    .cards__container {
+        width: 400px;
+    }
+
+    .card__container {
+        width: 90px;
+        height: 130px;
+    }
+
+    .card__container button {
+        background-size: auto 100%!important;
+        width: 100px!important;
+        height: 130px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .cards {
+        margin: 1rem!important;
+    }
+    .cards__container {
+        width: 300px;
+        gap: 10px;
+    }
+    .card__container {
+        width: 70px;
+        height: 100px;
+    }
+    .card__container button {
+        background-size: auto 100%!important;
+        width: 70px!important;
+        height: 100px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
